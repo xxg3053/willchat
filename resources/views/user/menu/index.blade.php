@@ -18,6 +18,9 @@
     <div class="portlet-body">
       <div class="col-md-6">
         <!-- 展示区 -->
+        <div id="app">
+          @{{ menuTree[0].name }}
+        </div>
 
         <div class="table-scrollable">
           <table class="table table-striped table-hover">
@@ -83,8 +86,16 @@
   </div>
 @stop
 @section('js')
+  <script src="{{ vendor('bower_components/vue/dist/vue.js') }}"></script>
   <script>
     $(document).ready(function () {
+      var app = new Vue({
+        el: '#app',
+        data: {
+          menuTree: {!! $menuTree !!}
+        }
+      });
+
       // 生成菜单按钮动作
       $('a#create-wxmenu').click(function (event) {
         event.preventDefault();
