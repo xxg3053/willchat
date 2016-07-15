@@ -300,7 +300,7 @@
                         area: area,
                         shadeClose: false, //开启遮罩关闭
                         content: url,
-                        duccess: function(){
+                        success: function(){
                             console.log(123);
                         }
                     });
