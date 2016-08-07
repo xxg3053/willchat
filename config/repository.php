@@ -52,7 +52,7 @@ return [
          | Enable or disable cache
          |
          */
-        'enabled'   => true,
+        'enabled' => true,
 
         /*
          |--------------------------------------------------------------------------
@@ -62,7 +62,7 @@ return [
          | Time of expiration cache
          |
          */
-        'minutes'   => 30,
+        'minutes' => 30,
 
          /*
           |--------------------------------------------------------------------------
@@ -82,7 +82,7 @@ return [
           |
           |
           */
-        'clean'     => [
+        'clean' => [
 
             /*
               |--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
             ],
         ],
 
-        'params'    => [
+        'params' => [
               /*
               |--------------------------------------------------------------------------
               | Skip Cache Params
@@ -203,12 +203,12 @@ return [
         |
         */
         'params' => [
-            'search'        => 'search',
-            'searchFields'  => 'searchFields',
-            'filter'        => 'filter',
-            'orderBy'       => 'orderBy',
-            'sortedBy'      => 'sortedBy',
-            'with'          => 'with',
+            'search'       => 'search',
+            'searchFields' => 'searchFields',
+            'filter'       => 'filter',
+            'orderBy'      => 'orderBy',
+            'sortedBy'     => 'sortedBy',
+            'with'         => 'with',
         ],
     ],
     /*

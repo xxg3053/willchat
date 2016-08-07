@@ -49,9 +49,9 @@ class Kernel extends HttpKernel
         'guest'      => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle'   => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 
-        'auth.user'  => \App\Http\Middleware\AuthenticateUser::class, // user 模块用户认证
+        'auth.user' => \App\Http\Middleware\AuthenticateUser::class, // user 模块用户认证
 
-        'account'    => \App\Http\Middleware\Account::class, // 公众号选择验证
+        'account' => \App\Http\Middleware\Account::class, // 公众号选择验证
 
         'role'       => \Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
