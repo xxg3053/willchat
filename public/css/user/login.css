@@ -1,22 +1,28 @@
 body {
-  background-color: #e2e2e2;
+  background-color: #C3C3C3;
 }
-.header {
-  text-align: center;
-}
-.header h1 {
-  font-size: 200%;
-  color: #333;
-  margin-top: 30px;
-}
-.form-control {
+
+.login-box {
+  width: 400px;
   display: block;
-  margin: 20px 0;
+  margin: 100px auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
 }
+
+.login-logo img {
+  display: block;
+  width: 200px;
+  margin: 15px auto 30px;
+}
+
 .copyright {
   display: block;
-  color: #888;
+  color: #777;
+  text-align: center;
+  font-size: 14px;
 }
+
 .copyright a {
   color: #777;
 }
