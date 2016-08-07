@@ -1,5 +1,5 @@
 @extends('user.layouts.base')
-@section('style')
+@section('css')
   <style>
     .dialog-content {
       width: 400px;

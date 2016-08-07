@@ -3,19 +3,19 @@
 namespace App\Http\Controllers\User;
 
 use App\Events\PasswordUpdated;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\User\PasswordRequest;
 use App\Http\Requests\User\UserinfoRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class ProfileController extends Controller
+class ProfileController extends UserController
 {
     /**
      * ProfileController constructor.
      */
     public function __construct()
     {
+        parent::__construct();
     }
 
     /**

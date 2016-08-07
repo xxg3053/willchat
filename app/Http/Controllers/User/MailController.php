@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
-
-class MailController extends Controller
+class MailController extends UserController
 {
     public function index()
     {

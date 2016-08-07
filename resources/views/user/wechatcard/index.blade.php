@@ -1,18 +1,16 @@
 @extends('user.layouts.base')
-@section('style')
+@section('css')
 @stop
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
-      <div class="caption">
-        <i class="fa fa-users"></i>卡券列表
-      </div>
-      <div class="actions">
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title"><span class="fa fa-users"></span>卡券列表</h3>
+      <div class="box-tools pull-right">
         <a class="btn default blue-stripe btn-xs" href="{{ user_url('/') }}"><i
               class="fa fa-plus"></i>创建卡券</a>
       </div>
     </div>
-    <div class="portlet-body">
+    <div class="box-body">
       <div class="note note-info">
         <h4 class="block">温馨提示：</h4>
         使用些功能，商户必须开通微信卡券功能，如未开通，请在公众平台进行申请。<br/>
@@ -44,13 +42,13 @@
               <td>{$item[$temp]['base_info']['sku']['total_quantity']}</td>
               <td>{$item[$temp]['base_info']['sku']['quantity']}</td>
               <td>
-                <a class="btn blue btn-xs dialog-popup"
+                <a class="btn btn-primary btn-xs popup"
                    href="{{ user_url('/') }}">查看二维码</a>
-                <a class="btn blue btn-xs dialog-popup"
+                <a class="btn btn-primary btn-xs popup"
                    href="{{ user_url('/') }}">更新库存</a>
-                <a class="btn blue btn-xs"
+                <a class="btn btn-primary btn-xs"
                    href="{{ user_url('/') }}">编辑</a>
-                <button class="btn red btn-xs btn-delete-confirm"
+                <button class="btn btn-danger btn-xs btn-delete-confirm"
                         data-link="{{ user_url('/') }}">
                   删除
                 </button>

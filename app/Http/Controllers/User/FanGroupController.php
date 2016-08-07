@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\FanGroupRepository;
 use App\Services\FanGroup as FanGroupService;
 use Illuminate\Http\Request;
@@ -11,7 +10,7 @@ use Illuminate\Support\Facades\Input;
 /**
  * Class FanGroupController.
  */
-class FanGroupController extends Controller
+class FanGroupController extends UserController
 {
     /**
      * @var FanGroupService
@@ -28,6 +27,8 @@ class FanGroupController extends Controller
      */
     public function __construct(FanGroupService $fanGroupService, FanGroupRepository $fanGroupRepository)
     {
+        parent::__construct();
+
         $this->fanGroupService = $fanGroupService;
 
         $this->fanGroupRepository = $fanGroupRepository;

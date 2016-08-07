@@ -1,0 +1,22 @@
+body {
+  background-color: #e2e2e2;
+}
+.header {
+  text-align: center;
+}
+.header h1 {
+  font-size: 200%;
+  color: #333;
+  margin-top: 30px;
+}
+.form-control {
+  display: block;
+  margin: 20px 0;
+}
+.copyright {
+  display: block;
+  color: #888;
+}
+.copyright a {
+  color: #777;
+}

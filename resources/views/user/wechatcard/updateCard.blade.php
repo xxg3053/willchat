@@ -1,17 +1,17 @@
 @extends('user.layouts.base')
-@section('style')
+@section('css')
   <link rel="stylesheet" href="{{ asset('css') }}/user/metronicuser.css"/>
   <link rel="stylesheet" type="text/css"
         href="{{ vendor('metronic/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}"/>
 @stop
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
+  <div class="box box-default">
+    <div class="box-header with-border">
       <div class="caption">
         <i class="fa fa-credit-card "></i> 更新卡券
       </div>
     </div>
-    <div class="portlet-body form">
+    <div class="box-body form">
       <div class="note note-info">
         <h4 class="block">温馨提示：</h4>
         带<span class="font-red">*</span>符号标注的字段修改后需要重新审核。
@@ -228,7 +228,7 @@
             <div class="row">
               <div class="col-md-offset-3 col-md-9">
                 <input type="hidden" name="card_type" value="{$card_type}"/>
-                <button type="submit" class="btn green">保存</button>
+                <button type="submit" class="btn btn-primary">保存</button>
                 <button type="button" class="btn default" onclick="javascript:history.go(-1);">取消</button>
               </div>
             </div>

@@ -2,14 +2,11 @@
 @section('main')
   <div class="row">
     <div class="col-md-12">
-      <div class="portlet light">
-        <div class="portlet-title">
-          <div class="caption caption-md">
-            <i class="icon-globe theme-font hide"></i>
-            <span class="caption-subject font-blue-madison bold uppercase">添加公众号</span>
-          </div>
+      <div class="box box-default">
+        <div class="box-header with-border">
+          <h3 class="box-title"><span class="fa fa-plus"></span>添加公众号</h3>
         </div>
-        <div class="portlet-body form">
+        <div class="box-body">
           <form action="" method="post" class="form-horizontal" role="form">
             <div class="form-body">
               <div class="form-group">
@@ -51,8 +48,8 @@
             <div class="form-actions">
               <div class="row">
                 <div class="col-md-offset-2 col-md-6">
-                  <button type="submit" class="btn green">保存</button>
-                  <a href="javascript:history.go(-1);" class="btn default">
+                  <button type="submit" class="btn btn-primary">保存</button>
+                  <a href="javascript:history.go(-1);" class="btn btn-default">
                     取消 </a>
                 </div>
               </div>

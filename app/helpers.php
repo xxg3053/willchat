@@ -120,7 +120,7 @@ function error($info, $redirectUrl = '')
  *
  * @return array
  */
-function getMenuTypes()
+function get_ment_types()
 {
     $typeMap = [
         'click'              => '点击',

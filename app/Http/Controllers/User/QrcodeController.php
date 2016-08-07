@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\QrcodeRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Storage;
 
-class QrcodeController extends Controller
+class QrcodeController extends UserController
 {
     const TYPE_FOREVER = 'forever';
     const TYPE_TEMPORARY = 'temporary';
@@ -25,18 +24,22 @@ class QrcodeController extends Controller
      */
     public function __construct(QrcodeRepository $qrcodeRepository)
     {
+        parent::__construct();
+
         $this->qrcodeRepository = $qrcodeRepository;
     }
 
     /**
      * 二维码列表.
      *
-     * @param $type
+     * @param Request $request
      *
      * @return mixed
      */
-    public function index($type)
+    public function index(Request $request)
     {
+        $type = $request->query('type');
+
         $easywechat = app('easywechat');
 
         $qrcodeService = $easywechat->qrcode;

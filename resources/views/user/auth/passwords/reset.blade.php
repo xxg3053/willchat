@@ -80,7 +80,7 @@
             </div>
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn blue pull-right" tabindex="4">
+            <button type="submit" class="btn btn-primary pull-right" tabindex="4">
                 提交 <i class="m-icon-swapright m-icon-white"></i>
             </button>
         </div>

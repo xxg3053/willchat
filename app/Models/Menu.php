@@ -58,7 +58,7 @@ class Menu extends Model
      */
     public function getTypeAttribute($type)
     {
-        $typeMap = getMenuTypes();
+        $typeMap = get_ment_types();
 
         return array_key_exists($type, $typeMap) ? $typeMap[$type] : '未知类型';
     }

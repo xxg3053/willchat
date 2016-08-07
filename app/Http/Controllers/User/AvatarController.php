@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\UserRepository;
 use Auth;
 use Illuminate\Http\Request;
 use Image;
 
-class AvatarController extends Controller
+class AvatarController extends UserController
 {
     /**
      * @var UserRepository
@@ -22,6 +21,8 @@ class AvatarController extends Controller
      */
     public function __construct(UserRepository $userRepository)
     {
+        parent::__construct();
+
         $this->userRepository = $userRepository;
     }
 
@@ -47,7 +48,7 @@ class AvatarController extends Controller
         $avatarFile = $request->file('avatar_file');
 
         if ($avatarFile->isValid()) {
-            $newName = 'uploads/avatar/'.Auth::user()->name.'.jpg';
+            $newName = '/uploads/avatar/'.Auth::user()->name.'.jpg';
 
             $cropWidth = $request->input('width');
             $cropHeight = $request->input('height');
@@ -64,8 +65,6 @@ class AvatarController extends Controller
 
                 return success('头像设置成功');
             } catch (\Exception $e) {
-                \Log::error($e->getMessage());
-
                 return error('头像设置出错');
             }
         } else {

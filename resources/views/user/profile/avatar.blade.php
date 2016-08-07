@@ -1,33 +1,19 @@
 @extends('user.layouts.baseindex')
-@section('style')
-  <link rel="stylesheet" href="{{ vendor('metronic/global/plugins/jquery-ui/jquery-ui.min.css') }}">
+@section('css')
+  <link href="http://cdn.bootcss.com/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet">
   <link href="{{ vendor('cropper-master/dist/cropper.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/user') }}/avatar.css" rel="stylesheet">
 @stop
 @section('main')
   <div class="row">
     <div class="col-md-12">
-      <div class="portlet light">
-        <div class="portlet-title tabbable-line">
-          <div class="caption caption-md">
-            <i class="icon-globe theme-font hide"></i>
-            <span class="caption-subject font-blue-madison bold uppercase">头像设置</span>
-          </div>
-          <ul class="nav nav-tabs">
-            <li>
-              <a href="{{ user_url('profile/userinfo') }}">个人信息设置</a>
-            </li>
-            <li class="active">
-              <a href="{{ user_url('avatar') }}">头像设置</a>
-            </li>
-            <li>
-              <a href="{{ user_url('profile/password') }}">修改密码</a>
-            </li>
-          </ul>
-        </div>
-        <div class="portlet-body">
-          <div class="tab-content">
-            <div class="avatar-body">
+      <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+          <li class=""><a href="{{ user_url('profile/userinfo') }}" >个人信息</a></li>
+          <li class="active"><a href="{{ user_url('avatar') }}" >头像设置</a></li>
+          <li class=""><a href="{{ user_url('profile/password') }}" >修改密码</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="avatar-body">
               <div class="avatar-upload">
                 <label for="avatar-file">选择图片</label>
                 <input class="avatar-input" id="avatar-file" name="avatar_file" type="file" accept=".jpg,.jpeg,.png">
@@ -36,7 +22,7 @@
               <div class="row">
                 <div class="col-sm-5">
                   <div class="avatar-wrapper">
-                    <img id="avatar" src="{{ asset(auth()->user()->avatar) }}" alt="">
+                    <img id="avatar" src="{{ $user->avatar }}" alt="">
                   </div>
                 </div>
                 <div class="col-sm-3">
@@ -57,14 +43,14 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
+
     </div>
   </div>
 @stop
 @section('js')
-  <script src="{{ vendor('metronic/global/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+  <script src="http://cdn.bootcss.com/jqueryui/1.12.0/jquery-ui.min.js"></script>
   <script src="{{ vendor('cropper-master/dist/cropper.min.js') }}"></script>
   <script src="{{ vendor('uploader-master/dist/uploader.min.js') }}"></script>
   <script type="text/javascript" charset="utf-8">

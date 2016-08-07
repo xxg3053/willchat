@@ -22,7 +22,7 @@ Route::any('order-notify', 'OrderNotifyController@notify');
 * Home
 */
 $home = [
-    'namespace' => 'User',
+    'namespace' => 'Home',
 ];
 
 Route::group($home, function () {
@@ -87,11 +87,11 @@ Route::group($user, function () {
         Route::post('fans/moveto/{id}', 'FansController@postMoveTo');
 
         // 二维码管理
-        Route::get('qrcode/{type}/{keyword?}', 'QrcodeController@index')->where('type', 'forever|temporary|card');
+        Route::get('qrcode', 'QrcodeController@index');
         Route::get('qrcode/create', 'QrcodeController@getCreate');
         Route::post('qrcode/create', 'QrcodeController@postCreate');
-        Route::get('qrcode/download/{id?}', 'QrcodeController@download');
-        Route::any('qrcode/destroy/{id?}', 'QrcodeController@destroy');
+        Route::get('qrcode/{id}/download', 'QrcodeController@download');
+        Route::any('qrcode/{id}/destroy', 'QrcodeController@destroy');
 
         // 粉丝组管理
         Route::get('fan-group', 'FanGroupController@index');
@@ -162,3 +162,5 @@ Route::get('open-oauth-callback', 'OpenAuthController@openOauthCallback');
 
 // 开放平台接口调用测试
 Route::get('open-test', 'OpenTestController@getIndex');
+
+Route::get('test', 'Home\IndexController@getIndex');

@@ -1,5 +1,5 @@
-@extends('user.layouts.dialogframe')
-@section('style')
+@extends('user.layouts.basepopup')
+@section('css')
 @endsection
 @section('main')
   <!-- BEGIN PAGE CONTENT-->
@@ -26,7 +26,7 @@
         <div class="form-group">
           <label>菜单类型</label>
           <select name="type" id="type" class="form-control">
-            @foreach (getMenuTypes() as $key => $menuType)
+            @foreach (get_ment_types() as $key => $menuType)
               @if (isset($menuData) && $menuType == $menuData->type)
                 <option value="{{ $key }}" selected>{{ $menuType }}</option>
               @else
@@ -50,8 +50,8 @@
         </div>
       </div>
       <div class="form-actions">
-        <button type="submit" class="btn green">保存</button>
-        <button type="button" class="btn red btn-closedialog">取消</button>
+        <button type="submit" class="btn btn-primary">保存</button>
+        <button type="button" class="btn btn-danger btn-closedialog">取消</button>
       </div>
     </form>
   </div>

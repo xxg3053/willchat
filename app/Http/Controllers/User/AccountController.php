@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Account\CreateRequest;
 use App\Http\Requests\Account\UpdateRequest;
 use App\Repositories\AccountRepository;
 
-class AccountController extends Controller
+class AccountController extends UserController
 {
     /**
      * @var AccountRepository
@@ -21,6 +20,8 @@ class AccountController extends Controller
      */
     public function __construct(AccountRepository $account)
     {
+        parent::__construct();
+
         $this->accountRepository = $account;
     }
 

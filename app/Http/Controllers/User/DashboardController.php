@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\AccountRepository;
 
-class DashboardController extends Controller
+class DashboardController extends UserController
 {
     /**
      * @var AccountRepository
@@ -19,6 +18,8 @@ class DashboardController extends Controller
      */
     public function __construct(AccountRepository $account)
     {
+        parent::__construct();
+
         $this->accountRepository = $account;
     }
 

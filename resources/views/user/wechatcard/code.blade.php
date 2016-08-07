@@ -1,14 +1,14 @@
 @extends('user.layouts.base')
-@section('style')
+@section('css')
 @stop
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
+  <div class="box box-default">
+    <div class="box-header with-border">
       <div class="caption">
         <i class="fa fa-users"></i> CODE管理
       </div>
     </div>
-    <div class="portlet-body">
+    <div class="box-body">
       <div class="note note-info">
         <h4 class="block">温馨提示：</h4>
         CODE核销以及设置CODE失败均为不可逆操作，请操作前确认所输入的CODE无误。<br/>

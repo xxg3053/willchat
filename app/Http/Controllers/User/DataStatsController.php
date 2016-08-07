@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
-
-class DataStatsController extends Controller
+class DataStatsController extends UserController
 {
     public function getIndex()
     {

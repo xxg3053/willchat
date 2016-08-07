@@ -1,12 +1,10 @@
 @extends('user.layouts.base')
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
-      <div class="caption">
-        <i class="fa fa-info"></i> 测试白名单设置
-      </div>
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title"><span class="fa fa-info"></span>测试白名单设置</h3>
     </div>
-    <div class="portlet-body form">
+    <div class="box-body form">
       <div class="note note-info">
         <h4 class="block">温馨提示：</h4>
         白名单中的微信用户可领取尚未通过审核的卡券，方便卡券商家预览卡券效果及进行测试。<br/>
@@ -29,7 +27,7 @@
           <div class="row">
             <div class="col-md-offset-3 col-md-9">
               <input type="hidden" name="id" value="{$info.id}"/>
-              <button type="submit" class="btn green">保存</button>
+              <button type="submit" class="btn btn-primary">保存</button>
               <button type="button" class="btn default" onclick="javascript:history.go(-1);">取消</button>
             </div>
           </div>

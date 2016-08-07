@@ -2,12 +2,11 @@
 
 namespace app\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Models\Reply;
 use App\Repositories\ReplyRepository;
 use Illuminate\Http\Request;
 
-class DefaultReplyController extends Controller
+class DefaultReplyController extends UserController
 {
     /**
      * @var ReplyRepository
@@ -21,6 +20,8 @@ class DefaultReplyController extends Controller
      */
     public function __construct(ReplyRepository $replyRepository)
     {
+        parent::__construct();
+
         $this->replyRepository = $replyRepository;
     }
 

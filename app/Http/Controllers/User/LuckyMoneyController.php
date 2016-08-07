@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use EasyWeChat\Foundation\Application;
 
-class LuckyMoneyController extends Controller
+class LuckyMoneyController extends UserController
 {
     /**
      * Display a listing of the resource.

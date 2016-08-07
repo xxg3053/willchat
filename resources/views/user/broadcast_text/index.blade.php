@@ -1,16 +1,14 @@
 @extends('user.layouts.base')
-@section('style')
+@section('css')
 @stop
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
-      <div class="caption">
-        <i class="fa fa-list"></i> 文本群发
-      </div>
-      <div class="actions">
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title"><span class="fa fa-list"></span>文本群发</h3>
+      <div class="box-tools pull-right">
       </div>
     </div>
-    <div class="portlet-body">
+    <div class="box-body">
       <div class="table-scrollable">
 
       </div>

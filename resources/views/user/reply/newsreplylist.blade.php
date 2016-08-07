@@ -1,18 +1,16 @@
 @extends('user.layouts.base')
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
-      <div class="caption">
-        <i class="fa fa-comment"></i> 文本回复规则
-      </div>
-      <div class="actions">
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title"><span class="fa fa-comment"></span>文本回复规则</h3>
+      <div class="box-tools pull-right">
         <a href="{{ user_url('reply-news/create') }}" class="btn default blue-stripe"><i class="fa fa-plus"></i>新增</a>
-        <a href="{{ user_url('reply-news/enable') }}" class="btn default green-stripe dialog-popup" target-form="ids"><i class="fa fa-check"></i>启用</a>
+        <a href="{{ user_url('reply-news/enable') }}" class="btn default green-stripe popup" target-form="ids"><i class="fa fa-check"></i>启用</a>
         <a href="{{ user_url('reply-news/disable') }}" class="btn default yellow-stripe" target-form="ids"><i class="fa fa-times"></i>禁用</a>
         <a href="{{ user_url('reply-news/destroy') }}" class="btn default red-stripe comfirmed" target-form="ids"><i class="fa fa-trash-o"></i>删除</a>
       </div>
     </div>
-    <div class="portlet-body">
+    <div class="box-body">
       <div class="table-scrollable">
         <table class="table table-striped table-bordered table-hover" id="sample_1">
           <thead>
@@ -36,8 +34,8 @@
 
                   <td>{{ $reply->created_at }}</td>
                   <td>
-                    <a class="btn blue btn-xs dialog-popup" href="{{ user_url('fans/editremark/'.$reply->id) }}"><i class="fa fa-edit"></i>修改备注</a>
-                    <a class="btn blue btn-xs dialog-popup" href="{{ user_url('fans/moveto/'.$reply->id) }}"><i class="fa fa-hand-paper-o"></i>移动至分组</a>
+                    <a class="btn btn-primary btn-xs popup" href="{{ user_url('fans/editremark/'.$reply->id) }}"><i class="fa fa-edit"></i>修改备注</a>
+                    <a class="btn btn-primary btn-xs popup" href="{{ user_url('fans/moveto/'.$reply->id) }}"><i class="fa fa-hand-paper-o"></i>移动至分组</a>
                   </td>
                 </tr>
               @endforeach

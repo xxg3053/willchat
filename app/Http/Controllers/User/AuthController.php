@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
 use Validator;
 
 class AuthController extends Controller
@@ -51,7 +52,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $registerView = 'user.auth.login';
+    protected $registerView = 'user.auth.register';
 
     /**
      * Login via username.
@@ -109,7 +110,7 @@ class AuthController extends Controller
     public function authenticated(Request $request, User $user)
     {
         // 最后登录时间和IP
-        $user->last_login_at = \Carbon\Carbon::create();
+        $user->last_login_at = \Carbon\Carbon::now();
         $user->last_login_ip = $request->getClientIp();
         $user->save();
 
@@ -128,14 +129,14 @@ class AuthController extends Controller
             $lockedAvatar = Auth::user()->avatar;
 
             // Store userinfo in session.
-            \Session::put('locked_name', $lockedName, 60);
-            \Session::put('locked_avatar', $lockedAvatar, 60);
+            Session::put('locked_name', $lockedName, 60);
+            Session::put('locked_avatar', $lockedAvatar, 60);
 
             // logout
             Auth::guard($this->getGuard())->logout();
         } else {
-            $lockedName = \Session::get('locked_name');
-            $lockedAvatar = \Session::get('locked_avatar');
+            $lockedName = Session::get('locked_name');
+            $lockedAvatar = Session::get('locked_avatar');
         }
 
         if (!$lockedName) {

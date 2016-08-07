@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\FanRepository;
 use App\Services\Fan as FanService;
 use EasyWeChat\Foundation\Application;
 use Illuminate\Http\Request;
 
-class FansController extends Controller
+class FansController extends UserController
 {
     /**
      * @var FanRepository
@@ -27,6 +26,8 @@ class FansController extends Controller
      */
     public function __construct(FanRepository $fanRepository, FanService $fanService)
     {
+        parent::__construct();
+
         $this->fanRepository = $fanRepository;
 
         $this->fanService = $fanService;

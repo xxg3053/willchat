@@ -1,12 +1,10 @@
 @extends('user.layouts.base')
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
-      <div class="caption">
-        <i class="fa fa-info"></i> 商家信息设置
-      </div>
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title"><span class="fa fa-info"></span>商家信息设置</h3>
     </div>
-    <div class="portlet-body form">
+    <div class="box-body form">
       <form class="form-horizontal validate" role="form" method="post" action="__SELF__">
         <div class="form-body">
           <div class="form-group">
@@ -78,7 +76,7 @@
           <div class="row">
             <div class="col-md-offset-3 col-md-9">
               <input type="hidden" name="id" value="{$info.id}">
-              <button type="submit" class="btn green">保存</button>
+              <button type="submit" class="btn btn-primary">保存</button>
               <button type="button" class="btn default" onclick="javascript:history.go(-1);">取消</button>
             </div>
           </div>

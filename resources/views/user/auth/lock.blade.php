@@ -1,84 +1,40 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="zh-CN" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="zh-CN" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="zh-CN">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
-<head>
-  <meta charset="utf-8" />
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
   <title>WillChat</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <meta content="" name="willchat" />
-  <meta content="" name="tianyong90" />
-  <!-- BEGIN GLOBAL MANDATORY STYLES -->
-  <!-- <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
-  <link href="{{ vendor('metronic/global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-  <link href="{{ vendor('metronic/global/plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
-  <link href="{{ vendor('metronic/global/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-  <link href="{{ vendor('metronic/global/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css" />
-  <!-- END GLOBAL MANDATORY STYLES -->
-  <!-- BEGIN THEME GLOBAL STYLES -->
-  <link href="{{ vendor('metronic/global/css/components-md.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
-  <link href="{{ vendor('metronic/global/css/plugins-md.min.css') }}" rel="stylesheet" type="text/css" />
-  <!-- END THEME GLOBAL STYLES -->
-  <!-- BEGIN PAGE LEVEL STYLES -->
-  <link href="{{ vendor('metronic/pages/css/lock.min.css') }}" rel="stylesheet" type="text/css" />
-  <!-- END PAGE LEVEL STYLES -->
-  <!-- BEGIN THEME LAYOUT STYLES -->
-  <!-- END THEME LAYOUT STYLES -->
-  <link rel="shortcut icon" href="favicon.ico" /> </head>
-<!-- END HEAD -->
-<body class="">
-<div class="page-lock">
-  <div class="page-logo">
-    <a class="brand" href="{{ user_url('/') }}">
-      <img src="{{ asset('images') }}/user/logo.png" alt="logo" height="30" /> </a>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.0/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="{{ css('user/login.css') }}" />
+</head>
+<body>
+<div class="header">
+  <div class="am-g">
+    <h1>WillChat</h1>
   </div>
-  <div class="page-body">
-    <div class="lock-head"> 锁屏中…… </div>
-    <div class="lock-body">
-      <div class="pull-left lock-avatar-block">
-        <img src="{{ asset($lockedAvatar) }}" class="lock-avatar"> </div>
-      <form class="lock-form pull-left" action="{{ user_url('login') }}" method="post">
-
-        {!! csrf_field() !!}
-
-        <h4>{{ $lockedName }}</h4>
-        <div class="form-group">
-          <input type="hidden" name="name" value="{{ $lockedName }}" />
-          <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" />
-        </div>
-        <div class="form-actions">
-          <button type="submit" class="btn red uppercase">登录</button>
-        </div>
-      </form>
-    </div>
-    <div class="lock-bottom">
-      <a href="{{ user_url('login') }}">换用其它账号登录</a>
-    </div>
-  </div>
-  <div class="page-footer-custom"> 2016 &copy; WillChat by Tianyong90. </div>
 </div>
-<!--[if lt IE 9]>
-<script src="{{ vendor('metronic/global/plugins/respond.min.js') }}"></script>
-<script src="{{ vendor('metronic/global/plugins/excanvas.min.js') }}"></script>
-<![endif]-->
-<!-- BEGIN CORE PLUGINS -->
-<script src="{{ vendor('metronic/global/plugins/jquery.min.js') }}" type="text/javascript"></script>
-<script src="{{ vendor('metronic/global/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="{{ vendor('metronic/global/plugins/js.cookie.min.js') }}" type="text/javascript"></script>
-<script src="{{ vendor('metronic/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
-<script src="{{ vendor('metronic/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
-<script src="{{ vendor('metronic/global/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
-<script src="{{ vendor('metronic/global/plugins/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
-<!-- BEGIN THEME GLOBAL SCRIPTS -->
-<script src="{{ vendor('metronic/global/scripts/app.min.js') }}" type="text/javascript"></script>
-<!-- END THEME GLOBAL SCRIPTS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="{{ vendor('metronic/pages/scripts/lock.min.js') }}" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
+<div class="am-g">
+  <div class="am-u-lg-4 am-u-md-8 am-u-sm-centered">
+    <form action="/user/login" method="post" id="login-form" class="am-form">
+      {!! csrf_field() !!}
+      <img src="{{ $lockedAvatar }}" alt=""/>
+      <input class="form-control" type="text" name="name" id="name" value="{{ $lockedName }}" placeholder="用户名">
+      <input class="form-control" type="password" name="password" id="password" value="" placeholder="密码">
+
+      <div class="am-cf">
+        <input type="submit" name="" value="登 录" class="am-btn am-btn-primary am-btn-sm am-fl">
+        <a href="" class="am-btn am-btn-default am-btn-sm am-fl">忘记密码？</a>
+      </div>
+    </form>
+    <hr>
+    <div class="copyright"> &copy; 2016 深圳荐货联盟网络科技有限公司 <a target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备16002610-2号</a> </div>
+  </div>
+</div>
+<script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js"></script>
 </body>
 </html>

@@ -2,26 +2,17 @@
 @section('main')
   <div class="row">
     <div class="col-md-12">
-      <div class="portlet light">
-        <div class="portlet-title">
-          <div class="caption caption-md">
-            <i class="icon-globe theme-font hide"></i>
-            <span class="caption-subject font-blue-madison bold uppercase">添加公众号</span>
-          </div>
+      <div class="box box-default">
+        <div class="box-header with-border">
+          <h3 class="box-title"><span class="fa fa-plus"></span>添加公众号</h3>
         </div>
-        <div class="portlet-body form">
+        <div class="box-body">
           <form action="" method="post" class="form-horizontal" role="form">
             <div class="form-body">
               <div class="form-group">
                 <label class="col-md-2 control-label">公众号名</label>
                 <div class="col-md-6">
                   <input type="text" name="name" value="{{ $accountInfo->name or old('name') }}" placeholder="如：willchat" class="form-control" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-2 control-label">token</label>
-                <div class="col-md-6">
-                  <input type="text" name="token" value="{{ $accountInfo->token or old('token') }}" placeholder="如：tokenwillchat" class="form-control" readonly />
                 </div>
               </div>
               <div class="form-group">
@@ -46,10 +37,10 @@
                 <label class="col-md-2 control-label">公众号类型</label>
                 <div class="col-md-6">
                   <select name="type" class="form-control">
-                    <option value="1" @if($accountInfo->type == '订阅号') selected @endif>订阅号</option>
-                    <option value="2" @if($accountInfo->type == '认证订阅号') selected @endif>认证订阅号</option>
-                    <option value="3" @if($accountInfo->type == '服务号') selected @endif>服务号</option>
-                    <option value="4" @if($accountInfo->type == '认证服务号') selected @endif>认证服务号</option>
+                    <option value="1">订阅号</option>
+                    <option value="2">认证订阅号</option>
+                    <option value="3">服务号</option>
+                    <option value="4">认证服务号</option>
                   </select>
                 </div>
               </div>
@@ -57,8 +48,8 @@
             <div class="form-actions">
               <div class="row">
                 <div class="col-md-offset-2 col-md-6">
-                  <button type="submit" class="btn green">保存</button>
-                  <a href="javascript:history.go(-1);" class="btn default">
+                  <button type="submit" class="btn btn-primary">保存</button>
+                  <a href="javascript:history.go(-1);" class="btn btn-default">
                     取消 </a>
                 </div>
               </div>

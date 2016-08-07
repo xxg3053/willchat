@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
 
-class DocumentController extends Controller
+class DocumentController extends UserController
 {
     /**
      * @var PostRepository
@@ -19,6 +18,8 @@ class DocumentController extends Controller
      */
     public function __construct(PostRepository $postRepository)
     {
+        parent::__construct();
+
         $this->postRepository = $postRepository;
     }
 

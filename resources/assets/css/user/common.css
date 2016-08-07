@@ -1,0 +1,348 @@
+body {
+
+}
+
+/* box */
+.box {
+  padding-bottom: 50px;
+  border-top: none;
+}
+
+.box-header {
+  padding: 15px 10px;
+}
+
+.box-header .box-tools {
+  top: 12px;
+}
+
+/* sidebar */
+.sidebar-menu i {
+  margin-right: 5px;
+}
+
+.sidebar-menu .treeview-menu li {
+  padding: 5px 0 5px 15px;
+}
+
+.sidebar-menu .treeview-menu li:hover {
+  background-color: #33464B;
+}
+
+.box-header.with-border {
+  border-bottom: 2px solid #ecf0f5;
+}
+
+.box-header .btn .fa {
+  margin-right: 8px;
+}
+
+.box-title .fa {
+  margin-right: 10px;
+  color: #999;
+}
+
+.row-nodata {
+  text-align: center;
+}
+
+/* stripe button */
+.btn.default {
+  color: #666;
+  background-color: #e1e5ec;
+  border-color: #e1e5ec;
+}
+
+.btn.default:hover {
+  background-color: #c0c9d7;
+  border-color: #c0c9d7;
+}
+
+.btn.white-stripe {
+  border-left: 4px solid #fff !important;
+}
+
+.btn.default-stripe {
+  border-left: 4px solid #e1e5ec !important;
+}
+
+.btn.dark-stripe {
+  border-left: 4px solid #2f353b !important;
+}
+
+.btn.blue-stripe {
+  border-left: 4px solid #3598dc !important;
+}
+
+.btn.blue-madison-stripe {
+  border-left: 4px solid #578ebe !important;
+}
+
+.btn.blue-chambray-stripe {
+  border-left: 4px solid #2C3E50 !important;
+}
+
+.btn.blue-ebonyclay-stripe {
+  border-left: 4px solid #22313F !important;
+}
+
+.btn.blue-hoki-stripe {
+  border-left: 4px solid #67809F !important;
+}
+
+.btn.blue-steel-stripe {
+  border-left: 4px solid #4B77BE !important;
+}
+
+.btn.blue-soft-stripe {
+  border-left: 4px solid #4c87b9 !important;
+}
+
+.btn.blue-dark-stripe {
+  border-left: 4px solid #5e738b !important;
+}
+
+.btn.blue-sharp-stripe {
+  border-left: 4px solid #5C9BD1 !important;
+}
+
+.btn.green-stripe {
+  border-left: 4px solid #32c5d2 !important;
+}
+
+.btn.green-meadow-stripe {
+  border-left: 4px solid #1BBC9B !important;
+}
+
+.btn.green-seagreen-stripe {
+  border-left: 4px solid #1BA39C !important;
+}
+
+.btn.green-turquoise-stripe {
+  border-left: 4px solid #36D7B7 !important;
+}
+
+.btn.green-haze-stripe {
+  border-left: 4px solid #44b6ae !important;
+}
+
+.btn.green-jungle-stripe {
+  border-left: 4px solid #26C281 !important;
+}
+
+.btn.green-soft-stripe {
+  border-left: 4px solid #3faba4 !important;
+}
+
+.btn.green-dark-stripe {
+  border-left: 4px solid #4DB3A2 !important;
+}
+
+.btn.green-sharp-stripe {
+  border-left: 4px solid #2ab4c0 !important;
+}
+
+.btn.grey-stripe {
+  border-left: 4px solid #E5E5E5 !important;
+}
+
+.btn.grey-steel-stripe {
+  border-left: 4px solid #e9edef !important;
+}
+
+.btn.grey-cararra-stripe {
+  border-left: 4px solid #fafafa !important;
+}
+
+.btn.grey-gallery-stripe {
+  border-left: 4px solid #555 !important;
+}
+
+.btn.grey-cascade-stripe {
+  border-left: 4px solid #95A5A6 !important;
+}
+
+.btn.grey-silver-stripe {
+  border-left: 4px solid #BFBFBF !important;
+}
+
+.btn.grey-salsa-stripe {
+  border-left: 4px solid #ACB5C3 !important;
+}
+
+.btn.grey-salt-stripe {
+  border-left: 4px solid #bfcad1 !important;
+}
+
+.btn.grey-mint-stripe {
+  border-left: 4px solid #525e64 !important;
+}
+
+.btn.red-stripe {
+  border-left: 4px solid #e7505a !important;
+}
+
+.btn.red-pink-stripe {
+  border-left: 4px solid #E08283 !important;
+}
+
+.btn.red-sunglo-stripe {
+  border-left: 4px solid #E26A6A !important;
+}
+
+.btn.red-intense-stripe {
+  border-left: 4px solid #e35b5a !important;
+}
+
+.btn.red-thunderbird-stripe {
+  border-left: 4px solid #D91E18 !important;
+}
+
+.btn.red-flamingo-stripe {
+  border-left: 4px solid #EF4836 !important;
+}
+
+.btn.red-soft-stripe {
+  border-left: 4px solid #d05454 !important;
+}
+
+.btn.red-haze-stripe {
+  border-left: 4px solid #f36a5a !important;
+}
+
+.btn.red-mint-stripe {
+  border-left: 4px solid #e43a45 !important;
+}
+
+.btn.yellow-stripe {
+  border-left: 4px solid #c49f47 !important;
+}
+
+.btn.yellow-gold-stripe {
+  border-left: 4px solid #E87E04 !important;
+}
+
+.btn.yellow-casablanca-stripe {
+  border-left: 4px solid #f2784b !important;
+}
+
+.btn.yellow-crusta-stripe {
+  border-left: 4px solid #f3c200 !important;
+}
+
+.btn.yellow-lemon-stripe {
+  border-left: 4px solid #F7CA18 !important;
+}
+
+.btn.yellow-saffron-stripe {
+  border-left: 4px solid #F4D03F !important;
+}
+
+.btn.yellow-soft-stripe {
+  border-left: 4px solid #c8d046 !important;
+}
+
+.btn.yellow-haze-stripe {
+  border-left: 4px solid #c5bf66 !important;
+}
+
+.btn.yellow-mint-stripe {
+  border-left: 4px solid #c5b96b !important;
+}
+
+.btn.purple-stripe {
+  border-left: 4px solid #8E44AD !important;
+}
+
+.btn.purple-plum-stripe {
+  border-left: 4px solid #8775a7 !important;
+}
+
+.btn.purple-medium-stripe {
+  border-left: 4px solid #BF55EC !important;
+}
+
+.btn.purple-studio-stripe {
+  border-left: 4px solid #8E44AD !important;
+}
+
+.btn.purple-wisteria-stripe {
+  border-left: 4px solid #9B59B6 !important;
+}
+
+.btn.purple-seance-stripe {
+  border-left: 4px solid #9A12B3 !important;
+}
+
+.btn.purple-intense-stripe {
+  border-left: 4px solid #8775a7 !important;
+}
+
+.btn.purple-sharp-stripe {
+  border-left: 4px solid #796799 !important;
+}
+
+.btn.purple-soft-stripe {
+  border-left: 4px solid #8877a9 !important;
+}
+
+.btn {
+  font-weight: 600;
+}
+
+.btn .fa {
+  margin-right: 5px;
+}
+
+/* 底部 */
+.main-footer {
+  padding: 5px 15px;
+}
+
+body.full-width .content-wrapper,
+.right-side,
+.main-footer {
+  margin-left: 0;
+}
+
+body.full-width .content-wrapper {
+  padding: 20px;
+}
+
+/* 部分全页面下隐藏侧栏开关 */
+body.full-width .sidebar-toggle {
+  display: none;
+}
+
+#dashboard-sidebar .profile-user-img {
+  width: 150px;
+  border: none;
+}
+
+#dashboard-sidebar .list-group-item {
+  padding-left: 1.5em;
+}
+
+#dashboard-sidebar .list-group-item.active {
+  background: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 0.4em solid #3c8dbc !important;
+}
+
+#dashboard-sidebar .list-group-item a {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3c8dbc;
+}
+
+form .form-body {
+  display: block;
+}
+
+form .form-actions {
+  display: block;
+  border-top: 1px solid #dfdfdf;
+  padding: 10px 0;
+}

@@ -1,5 +1,5 @@
-@extends('user.layouts.dialogframe')
-@section('style')
+@extends('user.layouts.basepopup')
+@section('css')
   <style>
   </style>
 @stop

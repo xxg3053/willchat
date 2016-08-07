@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Menu\CreateRequest;
 use App\Http\Requests\Menu\UpdateRequest;
 use App\Repositories\MenuRepository;
 use App\Services\Account as AccountService;
 use App\Services\Menu as MenuService;
 
-class MenuController extends Controller
+class MenuController extends UserController
 {
     /**
      * @var MenuRepository
@@ -35,6 +34,8 @@ class MenuController extends Controller
      */
     public function __construct(MenuRepository $menuRepository, MenuService $menuService, AccountService $accountService)
     {
+        parent::__construct();
+
         $this->menuRepository = $menuRepository;
 
         $this->menuService = $menuService;

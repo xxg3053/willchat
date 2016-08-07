@@ -1,16 +1,14 @@
 @extends('user.layouts.base')
 @section('main')
-  <div class="portlet light">
-    <div class="portlet-title">
-      <div class="caption">
-        <i class="fa fa-qrcode"></i> 二维码
-      </div>
-      <div class="actions">
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title"><span class="fa fa-qrcode"></span>二维码</h3>
+      <div class="box-tools pull-right">
         <a href="{{ user_url('qrcode/create') }}" class="btn default blue-stripe btn-xs"><i class="fa fa-plus"></i>新建</a>
         <button url="{{ user_url('qrcode/destroy') }}" class="btn default red-stripe btn-xs ajax-post confirm" target-form="ids"><i class="fa fa-trash-o"></i>删除 </button>
       </div>
     </div>
-    <div class="portlet-body">
+    <div class="box-body">
       <div class="table-scrollable">
         <table class="table table-striped table-hover">
           <thead>
@@ -37,8 +35,8 @@
                   <td>{{ $qrcode->created_at }}</td>
                   <td>{{ $qrcode->scaned_times }}</td>
                   <td>
-                    <a class="btn blue btn-xs" href="{{ user_url('qrcode/download/'.$qrcode->id) }}"><i class="fa fa-download"></i>下载</a>
-                    <button class="btn red btn-xs btn-delete-confirm" data-link="{{ user_url('qrcode/destroy/'.$qrcode->id) }}"><i class="fa fa-trash-o"></i>删除</button>
+                    <a class="btn btn-primary btn-xs" href="{{ user_url('qrcode/download/'.$qrcode->id) }}"><i class="fa fa-download"></i>下载</a>
+                    <button class="btn btn-danger btn-xs btn-delete-confirm" data-link="{{ user_url('qrcode/destroy/'.$qrcode->id) }}"><i class="fa fa-trash-o"></i>删除</button>
                   </td>
                 </tr>
               @endforeach

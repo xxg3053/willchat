@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\SystemFunction;
 use Illuminate\Http\Request;
 
-class SystemFunctionController extends Controller
+class SystemFunctionController extends UserController
 {
     /**
      * Display a listing of the resource.

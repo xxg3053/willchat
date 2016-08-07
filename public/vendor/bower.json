@@ -16,6 +16,10 @@
   ],
   "dependencies": {
     "vue": "^1.0.24",
-    "layer": "*"
+    "layer": "*",
+    "amazeui": "^2.7.0",
+    "AdminLTE": "adminlte#^2.3.5",
+    "bootstrap": "^3.3.6",
+    "js-cookie": "^2.1.2"
   }
 }

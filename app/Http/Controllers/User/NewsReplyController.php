@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\ReplyRepository;
 use Illuminate\Http\Request;
 
-class NewsReplyController extends Controller
+class NewsReplyController extends UserController
 {
     /**
      * @var ReplyRepository
@@ -15,6 +14,8 @@ class NewsReplyController extends Controller
 
     public function __construct(ReplyRepository $replyRepository)
     {
+        parent::__construct();
+
         $this->replyRepository = $replyRepository;
     }
 
