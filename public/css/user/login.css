@@ -3,17 +3,18 @@ body {
 }
 
 .login-box {
-  width: 400px;
+  width: 450px;
   display: block;
   margin: 100px auto;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 30px 40px;
+  border-radius: 5px;
 }
 
 .login-logo img {
   display: block;
-  width: 200px;
-  margin: 15px auto 30px;
+  width: 240px;
+  margin: 15px auto 40px;
 }
 
 .copyright {

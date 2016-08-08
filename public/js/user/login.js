@@ -247,3 +247,4 @@ var Login = function() {
         handleRegister: handleRegister
     };
 }();
+//# sourceMappingURL=login.js.map

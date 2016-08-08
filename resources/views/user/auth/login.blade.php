@@ -30,7 +30,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <form action="/user/login" method="post">
+    <form class="login-form" action="/user/login" method="post">
       {!! csrf_field() !!}
       <div class="form-group has-feedback">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -57,13 +57,10 @@
 <script src="{{ vendor('bower_components/AdminLTE') }}/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ vendor('bower_components/AdminLTE') }}/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ js('user/login.js') }}"></script>
 <script>
   $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
+    Login.handleLogin();
   });
 </script>
 </body>

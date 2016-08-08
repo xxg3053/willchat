@@ -26,44 +26,14 @@ elixir(function (mix) {
         'user/login.css'
     ], 'public/css/user/login.css');
 
-    mix.scripts('user/**.js', 'public/js/user');
+    mix.scripts([
+        'user/base.js'
+    ], 'public/js/user/all.js');
+
+    mix.scripts('user/login.js', 'public/js/user/login.js');
 
     mix.browserSync({
         proxy: 'localhost:8020/user'
     });
 });
 
-// var paths = {
-//     js: ['public/js/**/!(*.min).js'],
-//     css: ['public/css/**/!(*.min).css']
-// };
-
-// var gulp = require('gulp');
-// var minifycss = require('gulp-minify-css');
-// var rename = require('gulp-rename');
-// var uglify = require('gulp-uglify');
-//
-// gulp.task('minifyjs', function () {
-//     gulp.src(paths.js)
-//         .pipe(uglify())
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(gulp.dest('public/js'));
-// });
-//
-// gulp.task('minifycss', function () {
-//     gulp.src(paths.css)
-//         .pipe(minifycss({
-//             advanced: false,
-//             compatibility: 'ie8',
-//             keepBreaks: true
-//         }))
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(gulp.dest('public/css'));
-// });
-//
-// gulp.task('watch', function () {
-//     gulp.watch(paths.js, ['minifyjs']);
-//     gulp.watch(paths.css, ['minifycss']);
-// });
-//
-// gulp.task('default', ['minifycss', 'minifyjs', 'watch']);
