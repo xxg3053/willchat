@@ -434,6 +434,10 @@ body.full-width .sidebar-toggle {
   display: none;
 }
 
+#dashboard-sidebar .box-profile {
+  padding: 10px -0px;
+}
+
 #dashboard-sidebar .profile-user-img {
   width: 150px;
   border: none;
