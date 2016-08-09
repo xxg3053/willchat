@@ -24,7 +24,8 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    use AuthenticatesAndRegistersUsers {sendFailedLoginResponse as sendFailedLoginResponseRedirect;}
+    use ThrottlesLogins;
 
     /**
      * Where to redirect users after login / registration.
@@ -110,11 +111,32 @@ class AuthController extends Controller
     public function authenticated(Request $request, User $user)
     {
         // 最后登录时间和IP
-        $user->last_login_at = \Carbon\Carbon::now();
+        $user->last_login_at = time();
         $user->last_login_ip = $request->getClientIp();
         $user->save();
 
+        // 如果是 AJAX 请求则返回 JSON 数据
+        if ($request->ajax() && $request->wantsJson()) {
+            return success('登录成功', $this->redirectPath());
+        }
+
         return redirect()->intended($this->redirectPath());
+    }
+
+    /**
+     * Get the failed login response instance.
+     *
+     * @param \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        // 如果是 AJAX 请求则返回 JSON 数据
+        if ($request->ajax() && $request->wantsJson()) {
+            return error($this->getFailedLoginMessage());
+        }
+
+        return $this->sendFailedLoginResponseRedirect($request);
     }
 
     /**

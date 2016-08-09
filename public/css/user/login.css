@@ -27,4 +27,9 @@ body {
 .copyright a {
   color: #777;
 }
+
+.has-error {
+  border: 1px solid red;
+}
+
 /*# sourceMappingURL=login.css.map */

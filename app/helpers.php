@@ -92,7 +92,7 @@ function get_wechat_options($accountId)
 /**
  * 返回操作成功提示及跳转地址
  *
- * @param        $info
+ * @param string $info
  * @param string $redirectUrl
  *
  * @return \Illuminate\Http\JsonResponse
@@ -105,7 +105,7 @@ function success($info, $redirectUrl = '')
 /**
  * 返回操作失败提示及跳转地址
  *
- * @param        $info
+ * @param string $info
  * @param string $redirectUrl
  *
  * @return \Illuminate\Http\JsonResponse

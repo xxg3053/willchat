@@ -32,6 +32,10 @@
   <div class="login-box-body">
     <form class="login-form" action="/user/login" method="post">
       {!! csrf_field() !!}
+
+      <div class="alert alert-danger hide" role="alert">
+        <span></span>
+      </div>
       <div class="form-group has-feedback">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
         <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="账户名">
@@ -57,6 +61,8 @@
 <script src="{{ vendor('bower_components/AdminLTE') }}/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ vendor('bower_components/AdminLTE') }}/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ vendor('bower_components/jquery-backstretch/jquery.backstretch.min.js') }}"></script>
+<script src="{{ vendor('bower_components/jquery-validation/dist/jquery.validate.min.js') }}"></script>
 <script src="{{ js('user/login.js') }}"></script>
 <script>
   $(function () {
