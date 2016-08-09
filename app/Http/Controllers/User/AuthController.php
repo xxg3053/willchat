@@ -24,7 +24,7 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers {sendFailedLoginResponse as sendFailedLoginResponseRedirect;}
+    use AuthenticatesAndRegistersUsers {sendFailedLoginResponse as sendFailedLoginResponseRedirect; }
     use ThrottlesLogins;
 
     /**
@@ -126,7 +126,8 @@ class AuthController extends Controller
     /**
      * Get the failed login response instance.
      *
-     * @param \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     protected function sendFailedLoginResponse(Request $request)
