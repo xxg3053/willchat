@@ -20,6 +20,8 @@
     "amazeui": "^2.7.0",
     "AdminLTE": "adminlte#^2.3.5",
     "bootstrap": "^3.3.6",
-    "js-cookie": "^2.1.2"
+    "js-cookie": "^2.1.2",
+    "jquery-backstretch": "backstretch#^2.0.4",
+    "jquery-validation": "^1.15.1"
   }
 }
