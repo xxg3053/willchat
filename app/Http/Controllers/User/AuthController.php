@@ -140,6 +140,37 @@ class AuthController extends Controller
     }
 
     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            // 如果是 AJAX 请求则返回 JSON 数据
+            if ($request->ajax() && $request->wantsJson()) {
+                return error($validator->errors()->first());
+            }
+
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        Auth::guard($this->getGuard())->login($this->create($request->all()));
+
+        // 如果是 AJAX 请求则返回 JSON 数据
+        if ($request->ajax() && $request->wantsJson()) {
+            return success('注册成功', $this->redirectPath());
+        }
+
+        return redirect($this->redirectPath());
+    }
+
+    /**
      * Lockscreen.
      *
      * @return mixed

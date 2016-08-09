@@ -30,7 +30,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <form class="login-form" action="/user/login" method="post">
+    <form class="login-form" action="" method="post">
       {!! csrf_field() !!}
 
       <div class="alert alert-danger hide" role="alert">

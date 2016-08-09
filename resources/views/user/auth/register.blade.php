@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WillChat | 注册新用户</title>
+  <title>WillChat</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -13,9 +13,8 @@
   <!-- Ionicons -->
   <link href="http://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ vendor('bower_components/AdminLTE') }}/dist/css/AdminLTE.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="{{ vendor('bower_components/AdminLTE') }}/plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="{{ css('user/login.css') }}" />
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,69 +23,60 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition register-page">
-<div class="register-box">
-  <div class="register-logo">
+<body class="hold-transition">
+<div class="login-box">
+  <div class="login-logo">
     <img src="{{ img('user/logo.png') }}" width="320" alt="" />
   </div>
-
-  <div class="register-box-body">
-    <p class="login-box-msg">注册新用户</p>
-
-    <form action="/user/register" method="post">
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <form class="register-form" action="" method="post">
       {!! csrf_field() !!}
+
+      <div class="alert alert-danger hide" role="alert">
+        <span></span>
+      </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="name" placeholder="用户名">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="账户名">
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" placeholder="Email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <span class="glyphicon glyphicon-email form-control-feedback"></span>
+        <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="邮箱">
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="password" placeholder="密码">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <input type="password" class="form-control" name="password" placeholder="密码">
       </div>
       <div class="form-group has-feedback">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         <input type="password" class="form-control" name="password_confirmation" placeholder="确认密码">
-        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> 我已阅读并同意 <a href="#">用户协议</a>
-            </label>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">注册</button>
-        </div>
-        <!-- /.col -->
-      </div>
+      <button type="submit" class="btn btn-primary btn-block">注册</button>
     </form>
 
-    <a href="/user/login" class="text-center">已有账号？</a>
-  </div>
-  <!-- /.form-box -->
-</div>
-<!-- /.register-box -->
+    <!-- /.social-auth-links -->
 
+    <a href="#">忘记密码</a><br>
+    <a href="/user/register" class="text-center">注册账号</a>
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+<div class="copyright"> &copy; 2016 深圳荐货联盟网络科技有限公司 <a target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备16002610-2号</a> </div>
 <!-- jQuery 2.2.3 -->
 <script src="{{ vendor('bower_components/AdminLTE') }}/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ vendor('bower_components/AdminLTE') }}/bootstrap/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="{{ vendor('bower_components/AdminLTE') }}/plugins/iCheck/icheck.min.js"></script>
+<script src="{{ vendor('bower_components/jquery-backstretch/jquery.backstretch.min.js') }}"></script>
+<script src="{{ vendor('bower_components/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+<script src="{{ js('user/login.js') }}"></script>
 <script>
   $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
+    Login.handleRegister();
   });
 </script>
 </body>
 </html>
+
