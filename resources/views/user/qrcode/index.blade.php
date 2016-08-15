@@ -36,7 +36,7 @@
                   <td>{{ $qrcode->scaned_times }}</td>
                   <td>
                     <a class="btn btn-primary btn-xs" href="{{ user_url('qrcode/download/'.$qrcode->id) }}"><i class="fa fa-download"></i>下载</a>
-                    <button class="btn btn-danger btn-xs btn-delete-confirm" data-link="{{ user_url('qrcode/destroy/'.$qrcode->id) }}"><i class="fa fa-trash-o"></i>删除</button>
+                    <button class="btn btn-danger btn-xs confirm" data-link="{{ user_url('qrcode/destroy/'.$qrcode->id) }}"><i class="fa fa-trash-o"></i>删除</button>
                   </td>
                 </tr>
               @endforeach

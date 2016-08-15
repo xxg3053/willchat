@@ -14,7 +14,7 @@ var Base = function ($) {
                 var formItem = $('form');
                 // 清除旧的错误提示
                 formItem.find('.alert').remove();
-                this.success(data.info);
+                Base.success(data.info);
                 if (data.url) {
                     setTimeout(function () {
                         top.location.href = data.url
@@ -318,6 +318,37 @@ var Base = function ($) {
         });
     };
 
+    // 操作确认
+    var initConfirm = function () {
+        $('.confirm').on('click', function(event) {
+            event.preventDefault();
+
+            var url = $(this).data('link');
+            var msg = $(this).data('msg');
+
+            msg = msg ? msg : "确定要删除？";
+
+            top.layer.confirm(msg, {icon: 3, title: '操作提示'}, function (index) {
+                $.get(url, function(data, textStatus, xhr) {
+                    if (data.status) {
+                        Base.success(data.info);
+                        setTimeout(function () {
+                            if (data.url) {
+                                top.location.href = url;
+                            } else {
+                                top.location.reload();
+                            }
+                        }, 2000);
+                    } else {
+                        Base.error(data.info);
+                    }
+                });
+
+                top.layer.close(index);
+            });
+        });
+    };
+
     // 显示 loading 提示层
     var showLoading = function () {
         this.loadingIndex = top.layer.load();
@@ -360,6 +391,7 @@ var Base = function ($) {
             highlightProfileSidebar();
             initPopupDialog();
             initUploadfile();
+            initConfirm();
         },
         initDialogPage: function () {
             initAjaxForm();

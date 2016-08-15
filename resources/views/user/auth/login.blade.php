@@ -48,9 +48,10 @@
     </form>
 
     <!-- /.social-auth-links -->
-
-    <a href="#">忘记密码</a><br>
-    <a href="/user/register" class="text-center">注册账号</a>
+    <div class="form-actions">
+      <a href="/user/forget">忘记密码</a>
+      <a href="/user/register" class="text-center">注册账号</a>
+    </div>
 
   </div>
   <!-- /.login-box-body -->

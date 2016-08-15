@@ -37,7 +37,7 @@
               </td>
               <td>
                 <a class="btn btn-primary btn-xs popup" href="{{ user_url('menu/update/'.$menu->id) }}">编辑</a>
-                <button class="btn btn-danger btn-xs btn-delete-confirm" data-link="{{ user_url('menu/destroy/'.$menu->id) }}">删除</button>
+                <button class="btn btn-danger btn-xs confirm" data-link="{{ user_url('menu/destroy/'.$menu->id) }}">删除</button>
               </td>
             </tr>
             @if (count($menu->subButtons) > 0)
@@ -54,7 +54,7 @@
                   </td>
                   <td>
                     <a class="btn btn-primary btn-xs popup" href="{{ user_url('menu/update/'.$subButton->id) }}">编辑</a>
-                    <button class="btn btn-danger btn-xs btn-delete-confirm" data-link="{{ user_url('menu/destroy/'.$subButton->id) }}">删除</button>
+                    <button class="btn btn-danger btn-xs confirm" data-link="{{ user_url('menu/destroy/'.$subButton->id) }}">删除</button>
                   </td>
                 </tr>
               @endforeach

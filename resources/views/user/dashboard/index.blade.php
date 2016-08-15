@@ -33,7 +33,7 @@
               <a class="btn btn-primary btn-xs" href="{{ user_url('account/edit/'.$account->id) }}"><i class="fa fa-edit"></i>修改</a>
               <a class="btn btn-primary btn-xs" href="{{ user_url('account/interface/'.$account->id) }}"><i class="fa fa-link"></i>接口</a>
               <a class="btn btn-primary btn-xs" href="{{ user_url('account/manage/'.$account->id) }}"><i class="fa fa-cogs"></i>功能管理</a>
-              <button class="btn btn-danger btn-xs btn-delete-confirm" data-link="{{ user_url('account/destroy/'.$account->id) }}"><i class="fa fa-trash-o"></i>删除</button>
+              <button class="btn btn-danger btn-xs confirm" data-link="{{ user_url('account/destroy/'.$account->id) }}"><i class="fa fa-trash-o"></i>删除</button>
             </td>
           </tr>
         @endforeach
