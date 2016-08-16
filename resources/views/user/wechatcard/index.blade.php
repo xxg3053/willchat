@@ -48,7 +48,7 @@
                    href="{{ user_url('/') }}">更新库存</a>
                 <a class="btn btn-primary btn-xs"
                    href="{{ user_url('/') }}">编辑</a>
-                <button class="btn btn-danger btn-xs btn-delete-confirm"
+                <button class="btn btn-danger btn-xs confirm"
                         data-link="{{ user_url('/') }}">
                   删除
                 </button>

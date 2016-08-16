@@ -28,7 +28,7 @@
               <td>
                 @if(in_array($group['group_id'], [0,1,2]) == false)
                   <a class="btn btn-primary btn-xs popup" href="{{ user_url('fan-group/edit/'.$group['group_id'].'/'.$group['name']) }}"><i class="fa fa-edit"></i>编辑</a>
-                  <button class="btn btn-danger btn-xs btn-delete-confirm" data-link="{{ user_url('fan-group/destroy/'.$group['group_id']) }}"><i class="fa fa-trash-o"></i>删除
+                  <button class="btn btn-danger btn-xs confirm" data-link="{{ user_url('fan-group/destroy/'.$group['group_id']) }}"><i class="fa fa-trash-o"></i>删除
                   </button>
                 @endif
               </td>
