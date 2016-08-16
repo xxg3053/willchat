@@ -8,23 +8,21 @@ WillChat 是一套简单的微信管理系统。
 
 ## 特别提示
 
-项目中使用了免费开源的主题 AdminLTE,而项目早期使用的 Metronic 已经弃用，因为 Metronic 是一款商业模板，将它使用在开源项目中并不合适。这部分相关的代码将作为一个分支 metronic 存在，但该分支将不会继续更新。有兴趣的人可以自行购买 Metronic 授权后继续完善。同时该分支可能会在不久之后删除。
+项目中使用了免费开源的主题 AdminLTE，而项目早期使用的 Metronic 已经弃用，因为 Metronic 是一款商业主题模板，将它使用在开源项目中并不合适。这部分相关的代码将作为一个分支 metronic 存在，但该分支将不会继续更新，并有可能在不久之后删除。
 
 ## 环境要求
 
 - 正确配置了 Apache 或 Nginx 服务器。
 
-- 安装 PHP5.5.9或以上版本（推荐5.6.x或7.x版本），启用 cUrl、mcrypt扩展。
+- 安装 PHP5.5.9或以上版本（推荐使用7.x版本），启用 cUrl、mcrypt、fileinfo 扩展。
 
-- PHP 安装 fileinfo 扩展 （素材管理相关部分会用到）
-
-- 安装 composer
+- composer
 
 - MySQL 或 MariaDB，并设置默认存储引擎为 InnoDB
 
 - GD 或 Imagick 扩展
 
-- gulp 及 bower （非必须。主要用于在开发和发布过程中安装前端资源包，压缩/合并css和js文件等）
+- node相关环境（如gulp,bower,browserSync等，非必须。主要用于在开发和发布过程中安装前端资源包，压缩/合并css和js文件等）
 
 ## 安装
 
@@ -34,25 +32,25 @@ WillChat 是一套简单的微信管理系统。
 
 3. 安装依赖包
 
-    ```shell
+   ```shell
     composer install -vvv
-    ```
+   ```
 
 4. 复制根目录下 .env.example 文件为 .env
 
 5. 生成 APP_KEY
 
-    ```shell
+   ```shell
     php artisan key:generate
-    ```
+   ```
 
 6. 创建数据库（请将数据库字符集设置为 utf8mb4 以便存储可能出现的 emoji 表情），然后在 .env 文件中配置数据库、邮件等相关参数
 
 7. 生成数据表
 
-    ```shell
+   ```shell
     php artisan migrate
-    ```
+   ```
 
 ## 演示地址
 
@@ -62,17 +60,17 @@ WillChat 是一套简单的微信管理系统。
 
 ## 使用
 
-访问 http://项目域名/user 进入登录、注册页面，自行注册用户后登录即可。
+访问 http://项目域名 进入登录、注册页面，自行注册用户后登录即可。
 
 各功能模块详细使用说明将后期完善……
 
 ## 贡献代码
 
-欢迎有识、有志之士参与本项目，发挥您的聪明才智，贡献优雅的代码。
+欢迎有识、有志之士参与本项目，共同将它完善。
 
 **编写代码请务必遵守  PSR 规范。**
 
-同时也欢迎在 GitHub 上提出 Issue， 我将尽量及时作出处理或答复。
+同时也欢迎在 GitHub 上提交 Issue， 我将尽可能及时作出处理或答复。
 
 ## 致谢
 
@@ -82,4 +80,4 @@ WillChat 是一套简单的微信管理系统。
 
 ## License
 
-本项目遵循 MIT 开源协议。
+MIT
