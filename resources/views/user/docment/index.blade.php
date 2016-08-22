@@ -6,10 +6,7 @@
         <div class="box-header with-border">
           <h3 class="box-title"><span class="fa fa-user"></span>帮助中心</h3>
           <div class="box-tools pull-right">
-            <div class="input-group">
-              <span class="input-group-addon fa fa-search"></span>
-              <input type="text" class="form-control" placeholder="搜索" />
-            </div>
+            
           </div>
         </div>
         <div class="box-body">

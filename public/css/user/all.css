@@ -470,6 +470,10 @@ form .form-actions {
   border-top: 1px solid #dfdfdf;
   padding: 10px 0;
 }
+
+.row-empty {
+  text-align: center;
+}
 /*选择图片素材对话框*/
 #filetab {
     display: block;
@@ -585,15 +589,18 @@ form .form-actions {
   font-size: 17px;
   padding: 7px 18px;
 }
+#article-list li a {
+  color: #555;
+}
 #article-list a:hover {
-  color: #E82516;
+  color: blue;
 }
 #article-list .title {
   display: block;
   float: left;
 }
 #article-list .time {
-  display: inline-block;
+  display: block;
   float: right;
   color: #888;
 }

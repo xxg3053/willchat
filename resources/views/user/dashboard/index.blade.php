@@ -23,20 +23,26 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($accounts as $key => $account)
+        @if(count($accounts))
+          @foreach($accounts as $key => $account)
+            <tr>
+              <td>{{ $key+1 }}</td>
+              <td>{{ $account->name }}</td>
+              <td>{{ $account->type }}</td>
+              <td>{{ $account->created_at }}</td>
+              <td>
+                <a class="btn btn-primary btn-xs" href="{{ user_url('account/edit/'.$account->id) }}"><i class="fa fa-edit"></i>修改</a>
+                <a class="btn btn-primary btn-xs" href="{{ user_url('account/interface/'.$account->id) }}"><i class="fa fa-link"></i>接口</a>
+                <a class="btn btn-primary btn-xs" href="{{ user_url('account/manage/'.$account->id) }}"><i class="fa fa-cogs"></i>功能管理</a>
+                <button class="btn btn-danger btn-xs confirm" data-link="{{ user_url('account/destroy/'.$account->id) }}"><i class="fa fa-trash-o"></i>删除</button>
+              </td>
+            </tr>
+          @endforeach
+        @else
           <tr>
-            <td>{{ $key+1 }}</td>
-            <td>{{ $account->name }}</td>
-            <td>{{ $account->type }}</td>
-            <td>{{ $account->created_at }}</td>
-            <td>
-              <a class="btn btn-primary btn-xs" href="{{ user_url('account/edit/'.$account->id) }}"><i class="fa fa-edit"></i>修改</a>
-              <a class="btn btn-primary btn-xs" href="{{ user_url('account/interface/'.$account->id) }}"><i class="fa fa-link"></i>接口</a>
-              <a class="btn btn-primary btn-xs" href="{{ user_url('account/manage/'.$account->id) }}"><i class="fa fa-cogs"></i>功能管理</a>
-              <button class="btn btn-danger btn-xs confirm" data-link="{{ user_url('account/destroy/'.$account->id) }}"><i class="fa fa-trash-o"></i>删除</button>
-            </td>
+            <td colspan="10" class="row-empty">未添加公众号</td>
           </tr>
-        @endforeach
+        @endif
         </tbody>
       </table>
     </div>

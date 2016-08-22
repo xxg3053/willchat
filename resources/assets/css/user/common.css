@@ -350,3 +350,7 @@ form .form-actions {
   border-top: 1px solid #dfdfdf;
   padding: 10px 0;
 }
+
+.row-empty {
+  text-align: center;
+}

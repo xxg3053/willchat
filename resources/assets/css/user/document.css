@@ -12,15 +12,18 @@
   font-size: 17px;
   padding: 7px 18px;
 }
+#article-list li a {
+  color: #555;
+}
 #article-list a:hover {
-  color: #E82516;
+  color: blue;
 }
 #article-list .title {
   display: block;
   float: left;
 }
 #article-list .time {
-  display: inline-block;
+  display: block;
   float: right;
   color: #888;
 }
